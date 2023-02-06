@@ -15,7 +15,7 @@ export const generateNewMarker = ({
       new Popup({ offset: 25 }) // add popups
         .setHTML(
           '<label for="colorWell">Color:</label>\n' +
-            '<input type="color" value="#ff0000" id="colorWell" class="pickMe" />'
+            '<input type="color" value="#ff0000" name="markersssss" id="colorWell" class="pickMe" onchange="changeColor()"/>'
         )
     )
     .addTo(map);

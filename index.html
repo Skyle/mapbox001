@@ -9,5 +9,21 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      function changeColor(event) {
+        const elements = document.getElementsByClassName("pickMe");
+        console.log(elements);
+        console.log(event);
+        const markers = document.querySelectorAll("svg");
+        for (const marker of markers) {
+          marker.style.backgroundColor = event.target.value;
+        }
+        console.log("markers", markers);
+        for (const element of elements) {
+          element.style.backgroundColor = "red";
+        }
+        console.log("asdfhjkl");
+      }
+    </script>
   </body>
 </html>

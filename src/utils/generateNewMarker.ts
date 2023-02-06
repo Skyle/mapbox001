@@ -11,12 +11,12 @@ export const generateNewMarker = ({
 }) => {
   new Marker({ color: "#ffff66", scale: 1.5 })
     .setLngLat([lng, lat]) // CAN'T USE IT HERE
-    .addTo(map)
     .setPopup(
       new Popup({ offset: 25 }) // add popups
         .setHTML(
           '<label for="colorWell">Color:</label>\n' +
             '<input type="color" value="#ff0000" id="colorWell" class="pickMe" />'
         )
-    );
+    )
+    .addTo(map);
 };
